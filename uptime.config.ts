@@ -9,23 +9,46 @@ const workerConfig = {
   kvWriteCooldownMinutes: 3,
   monitors: [
     {
-      id: 'aicnn_api_monitor',
-      name: 'AICNN API Monitor',
+      id: 'aicnn_api',
+      name: 'AICNN API',
       method: 'GET',
       target: 'https://api.aicnn.cn/v1/',
-      tooltip: 'AICNN API Status',
+      tooltip: 'AICNN API Service Status',
       statusPageLink: 'https://api.aicnn.cn/v1/',
-      expectedCodes: [200, 201, 204], // 接受这些状态码表示正常
+      expectedCodes: [200],
       timeout: 10000,
       headers: {
-        'User-Agent': 'Uptimeflare Monitor',
+        'User-Agent': 'Uptimeflare 114514',
+      },
+    },
+    {
+      id: 'nsh_asia',
+      name: 'NSH Asia',
+      method: 'GET',
+      target: 'https://nsh.asia',
+      tooltip: 'NSH Asia Website Status',
+      statusPageLink: 'https://nsh.asia',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare 114514',
+      },
+    },
+    {
+      id: 'npiter_blog',
+      name: 'Npiter Blog',
+      method: 'GET',
+      target: 'https://blog.npiter.tech/',
+      tooltip: 'Npiter Blog Status',
+      statusPageLink: 'https://blog.npiter.tech/',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'Uptimeflare 114514',
       },
     }
   ],
   notification: {
-    // 如果你需要通知，请取消注释下面的配置并填入正确的值
-    // appriseApiServer: "https://your-apprise-server.com/notify",
-    // recipientUrl: "tgram://bottoken/ChatID",
     timeZone: "Asia/Shanghai",
     gracePeriod: 5,
   },
