@@ -9,21 +9,21 @@ const workerConfig = {
   kvWriteCooldownMinutes: 3,
   monitors: [
     {
-      id: 'aicnn_api',
-      name: 'AICNN API',
+      id: 'piter_api',
+      name: 'PITER API',
       method: 'GET',
-      target: 'https://api.aicnn.cn/v1/',
+      target: 'https://npiter-chatmerlinapi.hf.space/hf',
       tooltip: 'AICNN API Service Status',
-      statusPageLink: 'https://api.aicnn.cn/v1/',
+      statusPageLink: 'https://npiter-chatmerlinapi.hf.space/hf',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
-        'User-Agent': 'Uptimeflare 114514',
+        'User-Agent': 'piter',
       },
     },
     {
       id: 'nsh_asia',
-      name: 'NSH Asia',
+      name: 'piter的个人博客',
       method: 'GET',
       target: 'https://nsh.asia',
       tooltip: 'NSH Asia Website Status',
@@ -31,7 +31,7 @@ const workerConfig = {
       expectedCodes: [200],
       timeout: 10000,
       headers: {
-        'User-Agent': 'Uptimeflare 114514',
+        'User-Agent': 'piter',
       },
     },
     {
@@ -44,7 +44,7 @@ const workerConfig = {
       expectedCodes: [200],
       timeout: 10000,
       headers: {
-        'User-Agent': 'Uptimeflare 114514',
+        'User-Agent': 'piter',
       },
     }
   ],
