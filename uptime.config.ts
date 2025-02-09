@@ -1,7 +1,7 @@
 const pageConfig = {
   title: "API Status Monitor",
   links: [
-    { link: 'mailto:your@email.com', label: 'Contact', highlight: true },
+    { link: 'mailto:npiter1@outlook.com', label: 'Contact', highlight: true },
   ],
 }
 
