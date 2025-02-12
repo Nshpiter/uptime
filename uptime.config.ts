@@ -9,12 +9,12 @@ const workerConfig = {
   kvWriteCooldownMinutes: 3,
   monitors: [
     {
-      id: 'piter_api',
-      name: 'PITER API',
+      id: 'piterblog',
+      name: 'piter的小窝',
       method: 'GET',
-      target: 'https://npiter-chatmerlinapi.hf.space/hf',
+      target: 'https://npiter.us.kg',
       tooltip: 'AICNN API Service Status',
-      statusPageLink: 'https://npiter-chatmerlinapi.hf.space/hf',
+      statusPageLink: 'https://npiter.us.kg',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
