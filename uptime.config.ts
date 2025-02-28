@@ -12,9 +12,9 @@ const workerConfig = {
       id: 'piterblog',
       name: 'piter的小窝',
       method: 'GET',
-      target: 'https://npiter.us.kg',
+      target: 'https://npiter.tech',
       tooltip: 'AICNN API Service Status',
-      statusPageLink: 'https://npiter.us.kg',
+      statusPageLink: 'https://npiter.tech',
       expectedCodes: [200],
       timeout: 10000,
       headers: {
