@@ -1,10 +1,3 @@
-const pageConfig = {
-  title: "API Status Monitor",
-  links: [
-    { link: 'mailto:npiter1@outlook.com', label: 'Contact', highlight: true },
-  ],
-}
-
 const workerConfig = {
   kvWriteCooldownMinutes: 3,
   monitors: [
@@ -46,7 +39,20 @@ const workerConfig = {
       headers: {
         'User-Agent': 'piter',
       },
-    }
+    },
+    {
+      id: 'hy2',
+      name: 's15',
+      method: 'GET',
+      target: 'https://keep.charin.serv00.net/status',
+      tooltip: 'Keep Alive Service Status',
+      statusPageLink: 'https://keep.charin.serv00.net/status',
+      expectedCodes: [200],
+      timeout: 10000,
+      headers: {
+        'User-Agent': 'piter',
+      },
+    },
   ],
   notification: {
     timeZone: "Asia/Shanghai",
@@ -73,6 +79,4 @@ const workerConfig = {
       console.log(`Ongoing incident for ${monitor.name}`);
     },
   },
-}
-
-export { pageConfig, workerConfig }
+};
