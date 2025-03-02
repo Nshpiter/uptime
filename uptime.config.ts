@@ -1,3 +1,10 @@
+const pageConfig = {
+  title: "API Status Monitor",
+  links: [
+    { link: 'mailto:npiter1@outlook.com', label: 'Contact', highlight: true },
+  ],
+};
+
 const workerConfig = {
   kvWriteCooldownMinutes: 3,
   monitors: [
@@ -80,3 +87,6 @@ const workerConfig = {
     },
   },
 };
+
+// 导出两个配置对象
+export { pageConfig, workerConfig };
